@@ -55,14 +55,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
           <Link
             href="/"
-            className={`font-serif text-sm tracking-[0.22em] uppercase transition-colors duration-300 ${
+            className={`font-serif flex items-center gap-2 text-sm tracking-[0.22em] uppercase transition-colors duration-300 ${
               isTransparent
                 ? 'text-background hover:text-background/70'
                 : 'text-foreground hover:text-primary'
             }`}
             aria-label="Hungary Volleyball – Főoldal"
           >
-            Hungary Volleyball
+            <Image src="/favicon.ico" alt="Hungary Volleyball" width={32} height={32} />
+            <p className="sr-only">Hungary Volleyball</p>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8" aria-label="Fő navigáció">
