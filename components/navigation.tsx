@@ -47,40 +47,40 @@ export default function Navigation() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isTransparent
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isTransparent
             ? 'bg-transparent'
             : 'bg-background/98 backdrop-blur-md border-b border-border'
-        }`}
+          }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
-          <Link
-            href="/"
-            className={`font-serif flex items-center gap-2 text-sm tracking-[0.22em] uppercase transition-colors duration-300 ${
-              isTransparent
-                ? 'text-background hover:text-background/70'
-                : 'text-foreground hover:text-primary'
-            }`}
-            aria-label="Hungary Volleyball – Főoldal"
-          >
-            <Image src="/favicon.ico" alt="Hungary Volleyball" width={32} height={32} />
-            <p className="sr-only">Hungary Volleyball</p>
-          </Link>
+        <div className="flex items-center gap-1.5 ">
+          <Image src="/favicon.ico" alt="Hungary Volleyball" width={44} height={44} className="bg-white rounded-full p-1" />
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
+            <Link
+              href="/"
+              className={`font-serif flex items-center gap-2 text-sm tracking-[0.22em] uppercase transition-colors duration-300 ${isTransparent
+                  ? 'text-background hover:text-background/70'
+                  : 'text-foreground hover:text-primary'
+                }`}
+              aria-label="Hungary Volleyball – Főoldal"
+            >
+
+              Hungary Volleyball
+            </Link>
+          </div>
 
           <nav className="hidden lg:flex items-center gap-8" aria-label="Fő navigáció">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-sans text-xs tracking-[0.13em] uppercase transition-colors duration-300 pb-0.5 ${
-                  isTransparent
+                className={`font-sans text-xs tracking-[0.13em] uppercase transition-colors duration-300 pb-0.5 ${isTransparent
                     ? pathname === link.href
                       ? 'text-background border-b border-background/70'
                       : 'text-background/70 hover:text-background'
                     : pathname === link.href
-                    ? 'text-primary border-b border-primary'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
+                      ? 'text-primary border-b border-primary'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -94,19 +94,16 @@ export default function Navigation() {
             aria-expanded={mobileOpen}
           >
             <span
-              className={`block h-px transition-all duration-300 ${
-                isTransparent ? 'bg-background' : 'bg-foreground'
-              } ${mobileOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`}
+              className={`block h-px transition-all duration-300 ${isTransparent ? 'bg-background' : 'bg-foreground'
+                } ${mobileOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`}
             />
             <span
-              className={`block h-px transition-all duration-300 ${
-                isTransparent ? 'bg-background' : 'bg-foreground'
-              } ${mobileOpen ? 'w-0 opacity-0' : 'w-4'}`}
+              className={`block h-px transition-all duration-300 ${isTransparent ? 'bg-background' : 'bg-foreground'
+                } ${mobileOpen ? 'w-0 opacity-0' : 'w-4'}`}
             />
             <span
-              className={`block h-px transition-all duration-300 ${
-                isTransparent ? 'bg-background' : 'bg-foreground'
-              } ${mobileOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-6'}`}
+              className={`block h-px transition-all duration-300 ${isTransparent ? 'bg-background' : 'bg-foreground'
+                } ${mobileOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-6'}`}
             />
           </button>
         </div>
@@ -124,9 +121,8 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-serif text-4xl py-4 border-b border-border transition-colors duration-200 ${
-                  pathname === link.href ? 'text-primary' : 'text-foreground'
-                }`}
+                className={`font-serif text-4xl py-4 border-b border-border transition-colors duration-200 ${pathname === link.href ? 'text-primary' : 'text-foreground'
+                  }`}
                 style={{ transitionDelay: `${i * 40}ms` }}
               >
                 {link.label}
