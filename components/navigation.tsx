@@ -52,9 +52,9 @@ export default function Navigation() {
             : 'bg-background/98 backdrop-blur-md border-b border-border'
           }`}
       >
-        <div className="flex items-center gap-1.5 ">
+        <div className="flex items-center gap-1.5 max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
           <Image src="/favicon.ico" alt="Hungary Volleyball" width={44} height={44} className="bg-white rounded-full p-1" />
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 lg:h-20">
+          <div className="">
             <Link
               href="/"
               className={`font-serif flex items-center gap-2 text-sm tracking-[0.22em] uppercase transition-colors duration-300 ${isTransparent
